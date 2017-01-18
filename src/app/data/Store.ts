@@ -11,7 +11,7 @@ export class Store {
 	constructor(){
 	}
 
-	addProducts(products: IProduct[] = []){
+	addProducts(products: IProduct[] = []):void{
 		//this.products = this.products.concat(products)
 		for (var elem of products){
 			this.products.push(elem)
