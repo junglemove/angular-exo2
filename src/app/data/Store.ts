@@ -25,6 +25,7 @@ export class Store {
 				if (client.canPay(item.price)){
 					client.spendMoney(item.price)
 					this.products.splice(i, 1)
+					console.log(item.name+" ordered");
 					return item
 				}
 				else{

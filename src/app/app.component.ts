@@ -16,19 +16,21 @@ let products:Product[] = [
   new Product("3", "Frites", 3)
 ]
 
-let oneOrder = new Order("My order", products);
-
-console.log("BEFORE ORDER:" + oneRestaurant.total);
-oneRestaurant.passOrder(oneOrder);
-console.log("AFTER ORDER:" + oneRestaurant.total);
-
+console.log("/****** PRODUCTS LIST ******/");
 for(let i=0; i<products.length; i++){
   console.log("Name:"+ products[i].name +",Price:"+products[i].price);
 }
+console.log("/***************************/");
 
-for(var x in store.getProduct("1", oneRestaurant)){
-  console.log("found");
-}
+console.log("/****** ORDER ******/");
+let oneOrder = new Order("MyNewOrder", products);
+console.log("BEFORE ORDER:" + oneRestaurant.total);
+oneRestaurant.passOrder(oneOrder);
+console.log("AFTER ORDER:" + oneRestaurant.total);
+console.log("/******************/");
+
+if(store.getProduct("1", oneRestaurant) == null)
+  console.log("Product sliced properly after order");
 
 
 
