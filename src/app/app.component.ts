@@ -6,8 +6,6 @@ import { Restaurant } from './data/Restaurant';
 import { Store } from './data/Store';
 
 let store:Store = new Store();
-store.addProducts([new Product("1", "Steak", 15)]);
-store.addProducts([new Product("2", "Cheese burger", 13)]);
 
 let oneRestaurant = new Restaurant(store);
 let products:Product[] = [
@@ -15,6 +13,10 @@ let products:Product[] = [
   new Product("2", "Cheese burger", 13),
   new Product("3", "Frites", 3)
 ]
+
+/*store.addProducts([new Product("1", "Steak", 15)]);
+store.addProducts([new Product("2", "Cheese burger", 13)]);*/
+store.addProducts(products);
 
 console.log("/****** PRODUCTS LIST ******/");
 for(let i=0; i<products.length; i++){
